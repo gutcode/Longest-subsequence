@@ -1,2 +1,1 @@
-# Longest-subsequence
-A function that takes two strings, s1 and s2 and returns the longest common subsequence of s1 and s2
+Given two strings s1 and s2, return the longest common subsequence of s1 and s2 (with longest common subsequence defined as the longest sequence of characters such that all of them appear in both of the strings, possibly with other characters in between)

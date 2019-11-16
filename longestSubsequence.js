@@ -23,8 +23,10 @@ for (let s1Idx = s1StartIdx; s1Idx < s1.length; s1Idx++) {
      results.push(result);
     }
     
-    const longest = findLongest(results);
-    return longest.join('');
+    const longest = findLongest(results).join('');
+  
+    memo[s1StartIdx][s2StartIdx] = longest;
+    return longest;
  }
  
  function findLongest(arr) {

@@ -1,6 +1,15 @@
-<script>
+var _ = require('underscore');
+
+function sayHello() {
+    console.log('Hello, World');
+}
+
+_.times(10, sayHello);
+//Just for fun, real code starts from now
+
+
 function longestSubseq(s1, s2, s1StartIdx = 0, s2StartIdx = 0, memo) {
-  if (s1StartIdx >= s1.length || s2StartIdx >= s2.lenght)
+  if (s1StartIdx >= s1.length || s2StartIdx >= s2.length)
 return '';
 
 // console.log('s1StartIdx', s1StartIdx, memo);
@@ -12,7 +21,7 @@ if (memo == null) {
 } else if (memo[s1StartIdx][s2StartIdx] != null) {
   return memo[s1StartIdx][s2StartIdx];
 }
-const result = [];
+const results = [];
 for (let s1Idx = s1StartIdx; s1Idx < s1.length; s1Idx++) {
      const s1Char = s1[s1Idx];
      const s2Idx = s2.indexOf(s1Char, s2StartIdx);
@@ -41,4 +50,3 @@ for (let s1Idx = s1StartIdx; s1Idx < s1.length; s1Idx++) {
   return longest;
  }
  console.log('result', longestSubseq("ABAZDC", "BACBAD"))
-</script>
